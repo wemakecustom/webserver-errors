@@ -1,4 +1,5 @@
-HTTP/1.0 408 Request Time-out
+HTTP/1.0 <?php echo $code ?> <?php echo $title ?>
+
 Cache-Control: no-cache
 Connection: close
 Content-Type: text/html
@@ -7,7 +8,7 @@ Content-Type: text/html
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>408 Request Time-out</title>
+    <title><?php echo $code . ' ' . $title ?></title>
     <meta name="robots" content="noindex, nofollow">
     <style>
         html, body {
@@ -35,10 +36,10 @@ Content-Type: text/html
     <table id="wrapper">
         <tr>
             <td style="vertical-align:middle">
-                <h1>408 Request Time-out</h1>
+                <h1><?php echo $code . ' ' . $title ?></h1>
 
                 <div>
-                  <p>La requête que vous avez envoyée est trop grosse.<br /> Merci de réessayer.</p>
+                  <p><?php echo $description ?></p>
                 </div>
             </td>
         </tr>
