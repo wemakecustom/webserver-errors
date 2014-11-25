@@ -33,11 +33,14 @@ $codes = array(
 
 foreach ($codes as $code => $variables) {
     extract($variables);
-    ob_start();
 
-    include 'template.php';
+    foreach (array('apache' => 'html', 'haproxy' => 'http') as $template => $extension) {
+        ob_start();
 
-    file_put_contents("$code.http", ob_get_contents());
+        include "${template}.php";
 
-    ob_end_clean();
+        file_put_contents("${template}/${code}.${extension}", ob_get_contents());
+
+        ob_end_clean();
+    }
 }

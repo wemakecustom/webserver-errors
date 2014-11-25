@@ -1,13 +1,8 @@
-HTTP/1.0 502 Bad Gateway
-Cache-Control: no-cache
-Connection: close
-Content-Type: text/html
-
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>502 Bad Gateway</title>
+    <title>500 Internal Server Error</title>
     <meta name="robots" content="noindex, nofollow">
     <style>
         html, body {
@@ -16,7 +11,15 @@ Content-Type: text/html
             margin: 0;
             text-align: center;
             font-size: 24px;
-            background: #F2F2F2;
+
+            background: #f3f3f3;
+            background: -moz-linear-gradient(top,  #f4f4f4 0%, #ededed 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f4f4), color-stop(100%,#ededed));
+            background: -o-linear-gradient(top,  #f4f4f4 0%,#ededed 100%);
+            background: -ms-linear-gradient(top,  #f4f4f4 0%,#ededed 100%);
+            background: linear-gradient(to bottom,  #f4f4f4 0%,#ededed 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#ededed',GradientType=0 );
+
             color: #222;
             font-family: 'Open Sans Condensed', sans-serif;
             overflow: hidden;
@@ -28,6 +31,10 @@ Content-Type: text/html
             height: 90%;
             width: 100%;
         }
+
+        h1 {
+            text-shadow: 1px 1px 0px #ccc;
+        }
     </style>
     <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 </head>
@@ -35,7 +42,7 @@ Content-Type: text/html
     <table id="wrapper">
         <tr>
             <td style="vertical-align:middle">
-                <h1>502 Bad Gateway</h1>
+                <h1>500 Internal Server Error</h1>
 
                 <div>
                   <p>Une erreur interne s’est produite.<br />Réessayez un peu plus tard.</p>
